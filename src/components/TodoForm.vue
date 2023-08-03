@@ -26,9 +26,9 @@ const handleSubmit = () => {
     <input v-model="newTodo"
     placeholder="Enter your todo.."
     type="text"
-    class="w-56 p-4 rounded-lg outline-none">
+    class="w-56 p-2 rounded-lg outline-none">
 
     <button
-     class="bg-yellow-400 p-4 rounded-lg uppercase">add</button>
+     class="bg-yellow-400 p-2 rounded-lg uppercase">add</button>
     </form>
 </template>

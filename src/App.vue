@@ -3,8 +3,11 @@ import { ref } from 'vue';
 import { useTodoStore } from './stores/todoStore'
 import TodoDetails from './components/TodoDetails.vue'
 import TodoForm from './components/TodoForm.vue';
+import { storeToRefs } from 'pinia';
 
 const todoStore = useTodoStore()
+
+const { todos, favs, totalCount, favCount } = storeToRefs(todoStore)
 
 const filter = ref('all')
 
@@ -13,7 +16,7 @@ const filter = ref('all')
 <template>
    <header class="text-center max-w-md mt-6 rounded-lg items-center m-auto
     bg-gray-200 justify-center pt-4
-   pb-8">
+   pb-16">
     <main class="flex flex-1 justify-center items-end ">
     <img src="./assets/pinia.svg" 
     class="w-12 float-right"
@@ -44,16 +47,20 @@ const filter = ref('all')
     <!----todo list-->
 
     <div class="max-w-sm my-10 mx-auto" v-if="filter === 'all'">
-        <p class="text-lg font-semibold">You have {{ todoStore.totalCount }} todos left</p>
-        <div v-for="todo in todoStore.todos">
+        <p class="text-lg font-semibold">You have {{ totalCount }} todos left</p>
+        <div v-for="todo in todos">
          <TodoDetails :todo="todo"/>
         </div>
     </div>
     <div class="max-w-sm my-10 mx-auto" v-if="filter === 'favs'">
-        <p class="text-lg font-semibold">You have {{ todoStore.favCount }} favourite todos</p>
-        <div v-for="todo in todoStore.favs">
+        <p class="text-lg font-semibold">You have {{ favCount }} favourite todos</p>
+        <div v-for="todo in favs">
          <TodoDetails :todo="todo"/>
         </div>
     </div>
+
+    <button @click="todoStore.$reset"
+    class="float-left ml-4 mb-10 rounded-md
+     bg-yellow-400 uppercase tracking-wider p-2">reset</button>
    </header>
 </template>
