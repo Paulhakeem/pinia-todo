@@ -1,0 +1,24 @@
+{
+    "todos": [
+    {
+        "id": 1,
+        "title": "learn Vue",
+        "isFav": true
+    },
+    {
+        "id": 2,
+        "title": "learn Nuxt js",
+        "isFav": true
+    },
+    {
+        "id": 3,
+        "title": "learn JavaScript",
+        "isFav": true
+    },
+    {
+        "id": 4,
+        "title": "Sleep and enjoy your life",
+        "isFav": true
+    }
+    ]
+}
