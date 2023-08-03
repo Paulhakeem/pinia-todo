@@ -2,10 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useTodoStore = defineStore('todoStore', {
     state: () => ({
-        todos: [
-            {id: 1, title: "Buy some milk", isFav: false},
-            {id: 2, title: "Buy some bread", isFav: true}
-        ]
+        todos: []
     }),
     getters: {
         favs() {

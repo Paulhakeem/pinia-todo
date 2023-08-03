@@ -31,8 +31,8 @@ const filter = ref('all')
    
 
     <!-----filter-->
-     <nav class="w-full my-10 mx-auto flex">
-        <button class="ml-20 border-2 border-gray-300 bg-white rounded-md
+     <nav class="w-full my-10 mx-auto flex text-center justify-center">
+        <button class="border-2 border-gray-300 bg-white rounded-md
          py-2 px-4 cursor-pointer text-md uppercase"
         @click="filter = 'all'">all todos</button>
         <button class="ml-10 border-2 border-gray-300 bg-white rounded-md
