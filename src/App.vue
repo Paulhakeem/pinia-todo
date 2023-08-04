@@ -14,7 +14,7 @@ const filter = ref('all')
 
 </script>
 <template>
-   <header class="text-center max-w-md mt-6 rounded-lg items-center m-auto
+   <header class="pinia text-center max-w-md mt-6 rounded-lg items-center m-auto
     bg-gray-200 justify-center pt-4
    pb-16">
     <main class="flex flex-1 justify-center items-end ">

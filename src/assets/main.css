@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media screen and (max-width: 500px) {
+    .pinia {
+        width: 90%;
+        height: 50rem;
+    }
+}
